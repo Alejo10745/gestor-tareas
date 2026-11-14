@@ -1,0 +1,2 @@
+/* Already includes Tailwind CSS v4, so there is no separate @import 'tailwindcss'. */
+@import '@heroui/styles';
