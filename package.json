@@ -1,0 +1,12 @@
+{
+  "name": "gestor-tareas",
+  "private": true,
+  "scripts": {
+    "setup": "npm install && npm --prefix backend install && npm --prefix frontend install",
+    "dev": "concurrently -n api,web -c blue,green \"npm --prefix backend run start:dev\" \"npm --prefix frontend run dev\"",
+    "test": "npm --prefix backend test && npm --prefix backend run test:e2e && npm --prefix frontend test"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
