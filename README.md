@@ -133,3 +133,18 @@ Correcciones, al ver errores en la instalación, los tests o el linter:
 - Cambió `@nestjs/typeorm` 12 por la 11 (con TypeORM 0.3) porque Jest no cargaba la versión ESM.
 - Movió el `setLoading(true)` del `useEffect` a los eventos que lanzan la carga, por un aviso del linter.
 - Quitó un `role="status"` duplicado: el `Spinner` de HeroUI ya lo trae.
+
+**Qué acepté**
+
+Revisé el código parte por parte con sus explicaciones y lo probé en local antes de entregarlo. Me quedé con:
+
+- La estructura del backend por módulos y la validación con DTOs y un `ValidationPipe` global.
+- El hook `useTasks` para la carga, el filtro y los cambios de estado, sin añadir una librería de datos.
+- Los tests: unitarios y e2e en el backend, y de componentes y del cliente de API en el front.
+
+**Qué cambié yo sobre su propuesta**
+
+Estos cambios los decidí yo y los implementó la IA a petición mía:
+
+- Pasé los componentes a HeroUI para tener accesibilidad y un estilo coherente sin escribir CSS a mano.
+- Cambié `fetch` por axios: la URL base y la gestión de errores quedan en una instancia con un interceptor, y los componentes solo reciben un tipo de error.
